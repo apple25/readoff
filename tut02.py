@@ -6,47 +6,47 @@ Discuss lists and some basic methods to manipulate lists
 # Empty lists?
 
 fruits = ["bananas", "oranges", "grapes", "cherries"]
-# print(fruits)
+print(fruits)
 
 
 '''
 Unlike C, lists can store mixture of any data types
 '''
-# random_list = [1, True, "hi!", fruits, 42, ["332", "433"]]
-# print(random_list)
+random_list = [1, True, "hi!", fruits, 42, ["332", "433"]]
+print(random_list)
 
-# del random_list[2]
-# random_list.remove("hi!")
+del random_list[2]
+random_list.remove("hi!")
 
 
 '''
 Append
 '''
-# fruits.append('Strawberries')
-# print(fruits)
+fruits.append('Strawberries')
+print(fruits)
 
-# fruits[len(fruits):] = ['blackberries']
-# print(fruits)
+fruits[len(fruits):] = ['blackberries']
+print(fruits)
 
-# veges = ['potatoes', 'tomatoes', 'eggplants']
+veges = ['potatoes', 'tomatoes', 'eggplants']
 
-# fruits.extend(veges)
-# print(fruits)
+fruits.extend(veges)
+print(fruits)
 
-# fresh_foods = fruits + veges
-# print(fresh_foods)
+fresh_foods = fruits + veges
+print(fresh_foods)
 
 
 
 '''
 Insert: what if you want to add to any index?
 '''
-#list.insert(i,x)
+list.insert(i,x)
 fruits.insert(0, "lychees") 
 
 
-#list.clear()
-#fruits.clear() # same as del fruits[:]
+list.clear()
+fruits.clear() # same as del fruits[:]
 
 
 
@@ -60,22 +60,22 @@ uses the list sorted by their mark
 '''
 
 
-#list.sort
+# list.sort
 fruits.sort() # sort() changes the original list
 print(fruits)
 
-# fruits2 = sorted(fruits)
+fruits2 = sorted(fruits)
 
 
 '''
 Reverse
 '''
-# # fruits.reverse()
-# print(fruits)
+fruits.reverse()
+print(fruits)
 
-# rev_fruits = list(reversed(fruits))
-# rev_fruits = fruits[::-1]
-# print(rev_fruits[0])
+rev_fruits = list(reversed(fruits))
+rev_fruits = fruits[::-1]
+print(rev_fruits[0])
 
 
 
@@ -90,15 +90,15 @@ List comprehensions
 
 numbers = [-5, 3, 42, 10, 1]
 
-# nums1 = [x for x in numbers]
-# nums2 = [x + 5 for x in numbers]
-# nums3 = [x**2 for x in numbers]
-# nums4 = [x for x in numbers if x > 5]
+nums1 = [x for x in numbers]
+nums2 = [x + 5 for x in numbers]
+nums3 = [x**2 for x in numbers]
+nums4 = [x for x in numbers if x > 5]
 
-# print(nums1)
-# print(nums2)
-# print(nums3)
-# print(nums4)
+print(nums1)
+print(nums2)
+print(nums3)
+print(nums4)
 
 
 message = "BIG" if max(numbers) > 10 else "SMALL"
@@ -201,27 +201,27 @@ Implement a function that does the following:
 '''
 
 
-# def fruit_shop(fruit_prices):
-#     total = 0
+def fruit_shop(fruit_prices):
+    total = 0
 
-#     print('------------------------')
-#     for fruit, price in fruit_prices.items():
-#         count = int(input(f'How many units of {fruit}?: '))
-#         if count < 0:
-#             print('You cannot purchase negative units!')
-#             return
+    print('------------------------')
+    for fruit, price in fruit_prices.items():
+        count = int(input(f'How many units of {fruit}?: '))
+        if count < 0:
+            print('You cannot purchase negative units!')
+            return
 
-#         print(f'Added {count} units of {fruit} to your basket (${count * price})')
+        print(f'Added {count} units of {fruit} to your basket (${count * price})')
 
-#     print('------------------------')
+    print('------------------------')
     
-#     total += price * count
-#     print(f'It would be {total} dollars in total')
+    total += price * count
+    print(f'It would be {total} dollars in total')
 
 
-# fruit_prices = {'bananas': 10, 'rock melons': 4, 'blueberries': 23}
-# fruit_prices['golden apple'] = 42
-# fruit_shop(fruit_prices)
+fruit_prices = {'bananas': 10, 'rock melons': 4, 'blueberries': 23}
+fruit_prices['golden apple'] = 42
+fruit_shop(fruit_prices)
 
 
 
